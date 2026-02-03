@@ -6,18 +6,25 @@ import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.foqos.android.ui.screens.ProfilesScreen
 import com.foqos.android.ui.screens.StatsScreen
 import com.foqos.android.ui.screens.SettingsScreen
+import com.foqos.android.ui.viewmodel.ProfileViewModel
+import com.foqos.android.ui.viewmodel.SessionViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FoqosApp() {
     val navController = rememberNavController()
     var selectedTab by remember { mutableStateOf(0) }
+    
+    // Shared ViewModels across tabs
+    val profileViewModel: ProfileViewModel = viewModel()
+    val sessionViewModel: SessionViewModel = viewModel()
     
     Scaffold(
         topBar = {
@@ -73,7 +80,10 @@ fun FoqosApp() {
             modifier = Modifier.padding(padding)
         ) {
             composable("profiles") {
-                ProfilesScreen()
+                ProfilesScreen(
+                    profileViewModel = profileViewModel,
+                    sessionViewModel = sessionViewModel
+                )
             }
             composable("stats") {
                 StatsScreen()
