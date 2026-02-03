@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <include domain="database" path="."/>
+    <include domain="sharedpref" path="."/>
+    <exclude domain="database" path="foqos_database-wal"/>
+    <exclude domain="database" path="foqos_database-shm"/>
+</full-backup-content>

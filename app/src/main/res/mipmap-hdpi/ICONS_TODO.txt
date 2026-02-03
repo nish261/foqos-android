@@ -1,0 +1,21 @@
+TODO: Add launcher icons
+
+Generate icons using Android Studio:
+1. Right-click on res folder
+2. New → Image Asset
+3. Choose "Launcher Icons (Adaptive and Legacy)"
+4. Design your icon
+5. Click Next → Finish
+
+Or use online tools:
+- https://romannurik.github.io/AndroidAssetStudio/
+- https://icon.kitchen/
+
+Icon sizes needed:
+- mipmap-mdpi: 48x48
+- mipmap-hdpi: 72x72
+- mipmap-xhdpi: 96x96
+- mipmap-xxhdpi: 144x144
+- mipmap-xxxhdpi: 192x192
+
+For now, the app will use default Android icons.
