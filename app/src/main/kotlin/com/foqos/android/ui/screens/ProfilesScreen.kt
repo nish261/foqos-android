@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.foqos.android.data.model.BlockingProfile
 import com.foqos.android.data.model.BlockingStrategy
+import com.foqos.android.ui.components.ActiveSessionCard
 import com.foqos.android.ui.viewmodel.ProfileViewModel
 import com.foqos.android.ui.viewmodel.SessionViewModel
 
