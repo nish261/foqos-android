@@ -1,5 +1,8 @@
 # Foqos for Android
 
+[![Android Build](https://github.com/nish261/foqos-android/actions/workflows/build.yml/badge.svg)](https://github.com/nish261/foqos-android/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 **Free, open-source app blocker using NFC tags and QR codes for Android**
 
 This is an Android port of the iOS app [Foqos](https://github.com/awaseem/foqos), which helps you block distracting apps physically using NFC tags or QR codes to maintain focus.
@@ -125,34 +128,40 @@ app/src/main/
 
 ## 🚀 Building the Project
 
-### Prerequisites
-- **Android Studio:** Hedgehog (2023.1.1) or later
-- **JDK:** 17 or later
-- **Android SDK:** API 26+ (minimum), API 34 (target)
-- **Gradle:** 8.2.0 (included in project)
+### 📥 Quick Start: Download Pre-built APK
 
-### Steps
+**Easiest method:**
 
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/nish261/foqos-android.git
-   cd foqos-android
-   ```
+1. Go to [GitHub Actions](https://github.com/nish261/foqos-android/actions)
+2. Click on the latest successful workflow run (green checkmark)
+3. Download the **foqos-debug** artifact
+4. Unzip and install `app-debug.apk` on your Android device
 
-2. **Open in Android Studio**
-   - Launch Android Studio
-   - File → Open
-   - Select the `foqos-android` folder
-   - Wait for Gradle sync to complete
+APKs are automatically built on every push to `main` branch.
 
-3. **Build the Project**
-   - Build → Make Project (Cmd+F9 / Ctrl+F9)
-   - Fix any errors (should compile clean)
+---
 
-4. **Run on Device/Emulator**
-   - Connect an Android device or start an emulator
-   - Run → Run 'app' (Shift+F10)
-   - The app will install and launch
+### 🛠️ Build from Source
+
+**Full instructions:** See [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) for detailed guides.
+
+**Quick build:**
+
+```bash
+# Clone repository
+git clone https://github.com/nish261/foqos-android.git
+cd foqos-android
+
+# Build debug APK
+./gradlew assembleDebug
+
+# APK location: app/build/outputs/apk/debug/app-debug.apk
+```
+
+**Or open in Android Studio:**
+- File → Open → Select `foqos-android` folder
+- Wait for Gradle sync
+- Build → Build APK(s)
 
 ---
 
